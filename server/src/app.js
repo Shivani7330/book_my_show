@@ -6,9 +6,9 @@ import router from './routes/movies.route.js';
 
 
 dotenv.config();
-app.use(cors({origin:process.env.ALLOWED_ORIGIN, credentials:true} )   )
-const app = express();
 
+const app = express();
+app.use(cors({origin:process.env.ALLOWED_ORIGIN, credentials:true} )   )
 app.use(express.json());
 app.use("/api", router);
 
