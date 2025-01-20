@@ -82,7 +82,7 @@ const App = () => {
           seats: updatedTotalSeat,
         };
 
-        const response = await fetch("https://bookmyshow-project-4ldv.onrender.com/api/booking", {
+        const response = await fetch("https://bespoke-moxie-ed9d10.netlify.app/api/booking", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -91,7 +91,7 @@ const App = () => {
         });
 
         if (response.ok) {
-          const lastBookingResponse = await fetch("https://bookmyshow-project-4ldv.onrender.com/api/booking");
+          const lastBookingResponse = await fetch("https://bespoke-moxie-ed9d10.netlify.app/api/booking");
           const lastBookingData = await lastBookingResponse.json();
 
           setBookingData(lastBookingData);
