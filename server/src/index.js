@@ -3,7 +3,7 @@ import app from "./app.js";
 
 dbConnects()
   .then(() => {
-    app.listen(process.env.PORT),
+    app.listen(process.env.PORT || 10000),
       () => {
         console.log("server is listening at port", process.env.PORT);
       };

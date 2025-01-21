@@ -4,7 +4,7 @@ async function dbConnects() {
 
   try{
   const connection= await mongoose.connect(`${process.env.MONGODB_URI}/booking-tickets`);
-  console.log(`mongodb connected ${connection}`);
+  console.log(`mongodb connected ${connection.connection.host}`);
   }
   catch (error){
     console.log("error in mongodb connection", error);
